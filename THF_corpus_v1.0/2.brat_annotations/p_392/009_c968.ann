@@ -1,0 +1,8 @@
+T1	MajorPosition 0 101	Ein richtiger Kletterfelsen bräuchte natürlich einen Betreiber, der für Wartung und Sicherheit sorgt.
+T2	ClaimPro 102 149	Wenn sich das realisieren liese wäre ich dafür.
+T3	MajorPosition 150 254	Unabhängig davon würde ich mich für einen Boulder, ähnlich dem im Volkspark-Friedrichshain, aussprechen.
+T4	Premise 255 352	Wegen der geringen Höhe bräuchte es dort eben keine Betreiber, die ständig für Sicherheit sorgen.
+T5	Premise 353 522;523 578;579 604	Außerdem ist solch ein Boulder perfekt für Anfänger und Kinder, die hier komplett ohne Vorkenntnisse und spezielles Material einfach mal ein wenig "rumklettern" könnten. Fortgeschirttene kommen natürlich auch auf ihre Kosten. Ein Felsen für ALLE also.
+T6	Premise 729 860	Und wenn das im uneingezäunten Volkspark Friedrichshain gut funktioniert sollte das auf dem THF erst recht kein Problem darstellen.
+T7	ClaimPro 605 682	In Zukunft müsste lediglich für Instandhaltung und Sauberkeit gesorgt werden,
+T8	Premise 683 728	was ja auch für jede andere Sportstätte gilt.

@@ -1,0 +1,9 @@
+T1	ClaimPro 1532 1552	Also: ich bin dafür.
+T2	ClaimPro 1339 1460;1461 1508;1509 1530	Fazit: findet sich ein Betreiber, der die Betriebssicherheit gewährleistet, ist die Idee des Kletterfelsens hervorragend. Ein umgebender oder ausschliesslicher (großer!) Boulderbereich ebenso
+T3	ClaimContra 0 119	Ein Kletterfelsen, wie in einem der Wettbewerbsentwürfe gezeigt (60m hoher Felsenturm), wird sicher keine Chance haben.
+T4	ClaimPro 120 226	Ein Kunst-Kletterturm á la Schwedter Nordwand wäre allerdings wünschenswert und würde das Feld bereichern.
+T5	MajorPosition 227 328	Allerdings sollte man dabei bedenken, dass solche Kletterfelsen von jemandem betrieben werden müssen.
+T6	MajorPosition 329 379	Der DAV mit einer seiner Sektionen wäre kompetent,
+T7	Premise 380 423;424 511;512 578	nur wer sollte die Finanzierung übernehmen? Der DAV hat mit seiner neuen Kletterhalle in Berlin zunächst genug Finanzen zu stemmen. Der Ausbau dort ist noch lange nicht abgeschlossen und finanziert.
+T8	Premise 579 668;669 855;856 1062;1063 1174;1175 1248	Hinzu kommt, dass ein solcher Kletterfelsen mitnichten der Öffentlichkeit zugänglich ist. Aus haftungsrechtlichen Gründen (und um Vandalismus vorzubeugen) sind alle vergleichbaren Kunstfelsen eingezäunt und nur den Mitgliedern der zuständigen Klettervereinssektion zugänglich. Lässt man den Zugang frei, wie zB beim Wuhletalwächter, dann muss man mit entsprechend großem Sanierungsbedarf rechnen, da dann regelmäßig Zerstörung und Vermüllung ein geregeltes Klettern unmöglich machen. Das Scherbenaufkommen am Wuhletalwächter im Steinbett macht ein verletzungsfreies Landen sehr unwahrscheinlich. Der Boulderfelsen im Volkspark Friedrichhain hat genau das selbe Problem.
+T9	MajorPosition 1249 1338	Aber vielleicht hilft hier ja tatsächlich mal die Umzäunung und Bewachung des Geländes...

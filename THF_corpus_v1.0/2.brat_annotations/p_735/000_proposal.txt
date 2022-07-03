@@ -1,0 +1,5 @@
+Sitzstein mit WLAN
+
+In der Dortmunder Innenstadt wird Anfang April eine Skulptur eingeweiht: “Stein mit Vollausstattung” ist eine partizipatorische Skulptur im öffentlichen Raum, die aus einem großen Kunstfelsen und einem Mast mit Windrad und Solarpanelen besteht.
+Der gewonnene Strom wird den Passanten kostenlos zur Verfügung gestellt und betreibt gleichzeitig einen Router, der ein offenes WLAN anbietet.
+Der künstliche Felsen ist dabei so designt, dass er gleichzeitig Sitzmöbel ist.

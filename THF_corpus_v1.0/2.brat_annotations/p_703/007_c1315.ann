@@ -1,0 +1,10 @@
+T1	ClaimPro 0 99	Ein zentrales & reines Fußballstadion im Herzen Berlins kann es nur auf dem Tempelhofer Feld geben!
+T2	Premise 100 179	Hier ist soviel Platz, dass es den Park im Gesamten nicht beeinträchtigen würde
+T3	Premise 181 269	Über kurz oder lang (eher lang...) wird die Notwendigkeit eines solchen Stadions kommen.
+T4	Premise 270 403	Jede große Stadt hat ein solches Stadion und bei anhaltendem Erfolg werden sich auch Sponsoren für Hertha & solch ein Projekt finden.
+T5	Premise 405 586;587 731	ch bin als Herthaner sowieso für eine Fusion mit Union, um einen großen, schlagkräftigeren Hauptstadtclub mit einer dann sehr großen Fangemeinde zu bilden (utopisch, aber sinnvoll). Es mag sich ebenfalls utopisch anhören, aber eine derartige Basis + 5,5 Mio.-Metropole + Touristenmagnet bedarf dann einem 100.000-Mann-Stadion.
+T6	Premise 768 931	Und ganz ehrlich: Wer wünscht sich nicht eine reine Fußballarena an diesem genialen Ort in einem Riesenpark und mit guter Anbindung (S-Bahn, Bus, U-Bahn, Autobahn)
+T7	Premise 933 1102	Was für ein Anblick muss das sein, wenn man die Stadtautobahn entlang fährt und das angestrahlte Stadion sieht - natürlich mit gebührendem Abstand zum alten THF-Gebäude.
+T8	Premise 1103 1257	Diese einmalige Chance darf nicht durch Miesmacher und irgendwelche Schwachsinnsprojekte - bspw. zu groß angelegter Wohnungsbau - zunichte gemacht werden!
+T9	Premise 1258 1336	Es wäre letztlich ein Bau, der Berlin zudem ein neues Wahrzeichen geben würde!
+T10	EmotionPositiv 732 767	Träumen darf ja wohl erlaubt sein:)
