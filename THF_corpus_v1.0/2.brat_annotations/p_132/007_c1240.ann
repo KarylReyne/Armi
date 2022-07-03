@@ -1,0 +1,6 @@
+T1	Premise 0 60;61 141;142 210	Der demographische Wandel ist im vollen Gang auch in Berlin. Wir Senioren brauchen körperliche Fitness um in unseren Alltag rüstig zubleiben. Sorgt die körperliche Fitness doch auch für unsere geistige Fitness.
+T2	Premise 211 288;289 343;344 383;384 433	In vielen Stadtteilen gibt es mittlerweilen  Fitnessanlagen für die Senioren. Ich kenne die Anlagen im Preußen-  und Lietzenseepark. Dort wird sogar mit Trainern trainiert. In der ganzen Stadt sind diese Anlagen zu finden.
+T3	ClaimPro 434 510	Es bietet sich also an so eine Anlage auch auf dem Tempelhofer Feld zubauen.
+T4	MajorPosition 511 569	Vielleicht sogar mit festen Gruppen die sich dort treffen.
+T5	Premise 570 652;653 733	Es wäre für uns nicht nur der Anreiz zur Bewegung, sondern auch um sich zutreffen. Viele Senioren sind alleine und das wäre eine Möglichkeit dem entgegen zu wirken
+T6	Premise 735 841	Es gibt soviel Platz und daher wäre es schön wenn auch die Senioren berücksichtigt werden bei der Planung.

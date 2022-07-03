@@ -1,0 +1,4 @@
+T1	ClaimContra 0 49	Könnt ihr das nicht in Euren Privatgärten machen?
+T2	Premise 50 70	Wer will sowas denn?
+T3	ClaimContra 71 103	Dafür das schöne Feld verhunzen?
+T4	EmotionNegativ 0 49;50 70;71 103	Könnt ihr das nicht in Euren Privatgärten machen? Wer will sowas denn? Dafür das schöne Feld verhunzen?

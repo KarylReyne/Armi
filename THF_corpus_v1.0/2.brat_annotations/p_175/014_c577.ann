@@ -1,0 +1,12 @@
+T1	ClaimContra 0 26	Es spricht vieles dagegen,
+T2	Premise 27 91	einerseits widerspricht diese Art der Nutzung dem Volksentscheid
+T3	Premise 92 222	und andererseits sind die Voraussetzungen für einen Flughafenbetrieb weder technisch, personell noch genehmigungstechnisch gegeben
+T4	Premise 224 451	Als Regierungsflughafen ist das jetzige Terminal von Berlin-Schönefeld vorgesehen, Rettungsdienste landen auf Plätzen mit ausreichend Freiraum und brauchen hierzu keine separate Genehmigung, um bei Noteinsatz auf THF zu landen.
+T5	Premise 517 704	Wenn wieder - selbst eingeschränkt - Flugbetrieb auf dem THF aufgenommen wird, ist keine Erholung auf dem Gelände möglich (Lärm, Sicherheitsanforderungen etc.), vom Naturschutz abgesehen.
+T6	Premise 705 786	Auch für die Anwohner*innen wäre der Fluglärm eine Belastung, die vermeidbar ist.
+T7	ClaimContra 956 995	Die ILA mitten in Berlin - bitte nicht,
+T8	Premise 996 1040	wäre Lärmbelästigung für (fast) ganz Berlin.
+T9	ClaimContra 1041 1083	Ebenso wenig ständige Veranstaltungsflüge,
+T10	Premise 1084 1125	das belastet wiederum Natur und Erholung.
+T11	Premise 1126 1292	Der Volksentscheid hat sich für die Erhaltung des Naturschutzes ausgesprochen, in Verbindung mit Erholung, das sollte auch die Ausgangslage der Diskussionen hier sein
+T12	Premise 787 955	Zum Vorschlag von Marius, im Jubiläumsfall zum Flug Rosinenbomber Museumsflüge zu organisieren, das bedarf einer Sondergenehmigung, die ggf. noch eingeholt werden kann.

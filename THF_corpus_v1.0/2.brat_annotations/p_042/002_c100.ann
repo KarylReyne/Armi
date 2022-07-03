@@ -1,0 +1,5 @@
+T1	ClaimContra 0 16	Keine gute Idee.
+T2	Premise 17 84	RC-Flugzeuge, Hubschrauber etc. sind eher eine Gefahr für Besucher.
+T3	Premise 85 239;240 280	Für die restlichen o.a. Utensilien besteht aus meiner Sicht keine Notwendigkeit zur Lagerung, da diese Geräte nur an wenigen Tagen im Jahr genutzt werden. Es wäre schade um die vergeudete Fläche.
+T4	Premise 281 352	Ganz abgesehen davon wäre so ein Lagerschuppen sicher keine Augenweide.
+T5	EmotionNegativ 0 15	Keine gute Idee

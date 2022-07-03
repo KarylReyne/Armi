@@ -1,0 +1,7 @@
+T1	ClaimContra 0 10	Nee sorry!
+T2	Premise 11 80	Obwohl ich Graffiti liebe, finde ich nicht, dass sie zum Feld passen.
+T3	Premise 81 140	Mag außerdem die lösemittelhaltigen Farben nicht vertragen.
+T4	Premise 141 299	Wenn ich durch den Hans-Baluschek-Park radle, riecht es immer stark vom angrenzenden Südgelände nach Farbdünsten und das passt nicht wirklich zum Naturschutz.
+T5	MajorPosition 300 429	Aber eine Stelle, an der ich mir unbedingt mal etwas Farbe wünsche würde, ist die trübsinnige Autobahnbrücke in der Boelkestraße.
+T6	Premise 430 519	Dort würde der Geruch m.E. auch nicht stören, weil man sich eh nur durchgängig aufhält...
+T7	EmotionNegativ 81 140	Mag außerdem die lösemittelhaltigen Farben nicht vertragen.

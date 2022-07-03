@@ -1,0 +1,4 @@
+Sind die Mobilfunknetze tatsächlich auf dem Feld so schlecht?
+Muss ich mal ausprobieren...
+Ansonsten wäre WLAN über Freifunk natürlich eine schöne Sache, allerdings ließe sich darüber wohl kaum ein großer Teil der Fläche abdecken.
+Oder doch?
