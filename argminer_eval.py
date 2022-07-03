@@ -55,7 +55,6 @@ def rfc(task):
 
 if __name__ == '__main__':
 
-    task = "B"
     compute_in_sequence = True
 
     tm = ThreadManager()
@@ -66,6 +65,8 @@ if __name__ == '__main__':
         tm.execute_as_new_process(id='SVM {0}'.format(task), target=svm, args=(task, False,), join=compute_in_sequence)
         tm.execute_as_new_process(id='RFC {0}'.format(task), target=rfc, args=(task,), join=compute_in_sequence)
 
-    # get_stats("nbc()", n=10)
-    # get_stats("svm()", n=10)
-    # get_stats("dtc()", n=10)
+    # task = "B"
+    # get_stats("nbc(task)", n=10)
+    # get_stats("knn(task)", n=10)
+    # get_stats("svm(task)", n=10)
+    # get_stats("rfc(task)", n=10)
