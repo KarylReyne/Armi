@@ -21,7 +21,5 @@ class ThreadManager(object):
     def kill_separate_process(self, id):
         try:
             self.active_threads[id].raiseExc(ThreadKillerException)
-            # self.response_handler(text="The process with the id " + id + " was successfully terminated")
         except Exception as e:
-            # self.response_handler(text="While trying to terminate the process with the id " + id + ", the following exception was raised; {0}".format(e))
             print("kill_separate_process: {}".format(e))

@@ -1,24 +1,29 @@
 import numpy as np
-from nltk import word_tokenize, ngrams
+from nltk import ngrams
 from numpy.linalg import norm
 
 
-def get_postag_vector(postag_vector, train_set, tagger):
+def get_xtag_vector(xtag_vector, tag_str, train_set, spacy):
     large_doc = []
-    [large_doc.append(token) for tuple in train_set for token in word_tokenize(tuple[0])]
-    for triple in tagger.tag_sent(large_doc):
-        postag_vector[triple[2]] = 0
-    dict(sorted(postag_vector.items()))
+    [large_doc.append(tuple[0]) for tuple in train_set]
+    large_doc = " ".join(large_doc)
+    for item in spacy(large_doc):
+        tag = item.pos_ if tag_str == "pos" else item.dep_
+        xtag_vector[tag] = 0
+    dict(sorted(xtag_vector.items()))
 
 
-def preprocess(document, tagger):
-    tokens = word_tokenize(document)
-    # using the Hanover Tagger, not STTS
-    # https://serwiss.bib.hs-hannover.de/frontdoor/index/index/docId/1527
-    # (token, lemma, tag)
-    document_triple = tagger.tag_sent(tokens)
-    # TODO: dependency parsing
-    return tokens, document_triple
+def preprocess(document, spacy):
+    annotated_doc = spacy(document)
+    tok = []
+    pos = []
+    dep = []
+    lem = []
+    [tok.append(item.text) for item in annotated_doc]
+    [pos.append(item.pos_) for item in annotated_doc]
+    [dep.append(item.dep_) for item in annotated_doc]
+    [lem.append(item.lemma_) for item in annotated_doc]
+    return tok, pos, dep, lem
 
 
 def n_grams(features, tokens, n_list=[1, 2]):
@@ -31,34 +36,29 @@ def l2norm_nparray(array):
     return array/norm(array) if norm(array) != 0 else array
 
 
-def pos_tag_distribution(features, postag_vector, document_triple):
+def xtag_distribution(features, tag_vector, doc_tags):
     # count postags
-    for (token, lemma, tag) in document_triple:
-        postag_vector[tag] += 1
+    for tag in doc_tags:
+        try:
+            tag_vector[tag] += 1
+        except KeyError as e:
+            #print("{0} tag missing in tag_vector".format(e))
+            tag_vector[tag] = 1
 
     # get l2-normalized pos tag distribution vector
-    array = np.zeros(len(postag_vector))
+    array = np.zeros(len(tag_vector))
     i = 0
-    for key in postag_vector:
-        array[i] = postag_vector[key]
-        postag_vector[key] = 0
+    for key in tag_vector:
+        array[i] = tag_vector[key]
+        tag_vector[key] = 0
         i += 1
     array = l2norm_nparray(array)
 
     j = 0
-    for tag in postag_vector:
+    for tag in tag_vector:
         if array[j] != 0:
             features["{0} count".format(tag)] = array[j]
         j += 1
-
-    # # convert array to hashable string
-    # pos_dist = "["
-    # for j in range(0, i):
-    #     pos_dist += "{0}, ".format(array[j])
-    # pos_dist = pos_dist.rstrip(", ")+"]"
-    #
-    # features["POS tag distribution"] = pos_dist
-    # print("POS tag distribution: {0}".format(features["POS tag distribution"]))
 
 
 def structural_features(features, tokens):
@@ -74,12 +74,13 @@ def structural_features(features, tokens):
     features["last token"] = 'OTHER' if tokens[sum-1] not in ['.', '!', '?'] else tokens[sum-1]
 
 
-def features(document, postag_vector, tagger):
-    tokens, document_triple = preprocess(document, tagger)
+def features(document, postag_vector, deptag_vector, spacy):
+    tok, pos, dep, lem = preprocess(document, spacy)
     features = {}
 
-    n_grams(features, tokens, n_list=[1])
-    pos_tag_distribution(features, postag_vector, document_triple)
-    structural_features(features, tokens)
+    n_grams(features, tok, n_list=[1])
+    xtag_distribution(features, postag_vector, pos)
+    xtag_distribution(features, deptag_vector, dep)
+    structural_features(features, tok)
 
     return features
