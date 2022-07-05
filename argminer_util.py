@@ -1,9 +1,18 @@
-import spacy
+import de_core_news_sm
 import xmltodict
 from nltk import NaiveBayesClassifier, classify
 from argminer_features import get_xtag_vector
 from processing.thread_manager import ThreadManager
 from nltk.metrics import ConfusionMatrix
+
+
+def ensure_spacy_dataset_presence(dataset):
+    try:
+        spcy = de_core_news_sm.load()
+    except Exception as e:
+        print(e)
+        print("spacy dataset '{0}' not present. Install it via 'python -m spacy download {0}'".format(dataset))
+        exit()
 
 
 def read_corpora(task, collapse_claims=True):
@@ -30,7 +39,9 @@ def read_corpora(task, collapse_claims=True):
 
 def map_feature_extraction(extraction_function, task):
     train_corpus, test_corpus = read_corpora(task)
-    spcy = spacy.load("de_core_news_sm")
+
+    # spcy = spacy.load("de_core_news_sm")
+    spcy = de_core_news_sm.load()
 
     tm = ThreadManager()
 

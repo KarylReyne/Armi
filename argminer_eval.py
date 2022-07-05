@@ -5,7 +5,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from argminer_features import features
-from argminer_util import evaluate_feature_extraction
+from argminer_util import evaluate_feature_extraction, ensure_spacy_dataset_presence
 from processing.thread_manager import ThreadManager
 
 
@@ -54,6 +54,7 @@ def rfc(task):
 
 
 if __name__ == '__main__':
+    ensure_spacy_dataset_presence("de_core_news_sm")
 
     compute_in_sequence = True
 
