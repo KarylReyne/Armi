@@ -6,12 +6,12 @@ from processing.thread_manager import ThreadManager
 from nltk.metrics import ConfusionMatrix
 
 
-def ensure_spacy_dataset_presence(dataset):
+def check_spacy_dataset_presence():
     try:
         spcy = de_core_news_sm.load()
     except Exception as e:
         print(e)
-        print("spacy dataset '{0}' not present. Install it via 'python -m spacy download {0}'".format(dataset))
+        print("spacy dataset 'de_core_news_sm' not present. Install it via 'python -m spacy download de_core_news_sm'")
         exit()
 
 

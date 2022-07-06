@@ -5,7 +5,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from argminer_features import features
-from argminer_util import evaluate_feature_extraction, ensure_spacy_dataset_presence
+from argminer_util import evaluate_feature_extraction, check_spacy_dataset_presence
 from processing.thread_manager import ThreadManager
 
 
@@ -54,17 +54,17 @@ def rfc(task):
 
 
 if __name__ == '__main__':
-    ensure_spacy_dataset_presence("de_core_news_sm")
+    check_spacy_dataset_presence()
 
     compute_in_sequence = True
 
     tm = ThreadManager()
 
-    for task in ["A", "B"]:
+    for task in ["B"]:
         tm.execute_as_new_process(id='NBC {0}'.format(task), target=nbc, args=(task,), join=compute_in_sequence)
-        tm.execute_as_new_process(id='KNN {0}'.format(task), target=knn, args=(task,), join=compute_in_sequence)
-        tm.execute_as_new_process(id='SVM {0}'.format(task), target=svm, args=(task, False,), join=compute_in_sequence)
-        tm.execute_as_new_process(id='RFC {0}'.format(task), target=rfc, args=(task,), join=compute_in_sequence)
+        # tm.execute_as_new_process(id='KNN {0}'.format(task), target=knn, args=(task,), join=compute_in_sequence)
+        # tm.execute_as_new_process(id='SVM {0}'.format(task), target=svm, args=(task, False,), join=compute_in_sequence)
+        # tm.execute_as_new_process(id='RFC {0}'.format(task), target=rfc, args=(task,), join=compute_in_sequence)
 
     # task = "B"
     # get_stats("nbc(task)", n=10)

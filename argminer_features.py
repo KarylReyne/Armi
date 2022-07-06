@@ -28,7 +28,9 @@ def preprocess(document, spacy):
 
 def n_grams(features, tokens, n_list=[1, 2]):
     for n in n_list:
-        for ngram in ngrams(tokens, n):
+        lowercase_tokens = set()
+        [lowercase_tokens.add(token.lower()) for token in tokens]
+        for ngram in ngrams(lowercase_tokens, n):
             features['contains {0}-gram {1}'.format(n, ngram)] = True
 
 
