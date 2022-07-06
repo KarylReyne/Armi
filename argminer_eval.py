@@ -60,11 +60,11 @@ if __name__ == '__main__':
 
     tm = ThreadManager()
 
-    for task in ["B"]:
+    for task in ["A", "B"]:
         tm.execute_as_new_process(id='NBC {0}'.format(task), target=nbc, args=(task,), join=compute_in_sequence)
-        # tm.execute_as_new_process(id='KNN {0}'.format(task), target=knn, args=(task,), join=compute_in_sequence)
-        # tm.execute_as_new_process(id='SVM {0}'.format(task), target=svm, args=(task, False,), join=compute_in_sequence)
-        # tm.execute_as_new_process(id='RFC {0}'.format(task), target=rfc, args=(task,), join=compute_in_sequence)
+        tm.execute_as_new_process(id='KNN {0}'.format(task), target=knn, args=(task,), join=compute_in_sequence)
+        tm.execute_as_new_process(id='SVM {0}'.format(task), target=svm, args=(task, False,), join=compute_in_sequence)
+        tm.execute_as_new_process(id='RFC {0}'.format(task), target=rfc, args=(task,), join=compute_in_sequence)
 
     # task = "B"
     # get_stats("nbc(task)", n=10)
