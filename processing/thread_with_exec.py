@@ -2,8 +2,6 @@ import ctypes
 import inspect
 import threading
 
-
-# from http://tomerfiliba.com/recipes/Thread2/ (modified)
 def _async_raise(tid, exctype):
     '''Raises an exception in the threads with id tid'''
     if not inspect.isclass(exctype):
@@ -13,8 +11,6 @@ def _async_raise(tid, exctype):
     if res == 0:
         raise ValueError("invalid thread id")
     elif res != 1:
-        # "if it returns a number greater than one, you're in trouble,
-        # and you should call it again with exc=NULL to revert the effect"
         ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_long(tid), None)
         raise SystemError("PyThreadState_SetAsyncExc failed")
 
@@ -35,17 +31,13 @@ class ThreadWithExc(threading.Thread):
         if not self.is_alive():
             raise threading.ThreadError("the thread is not active")
 
-        # do we have it cached?
         if hasattr(self, "_thread_id"):
             return self._thread_id
 
-        # no, look for it in the _active dict
         for tid, tobj in threading._active.items():
             if tobj is self:
                 self._thread_id = tid
                 return tid
-
-        # TODO: in python 2.6, there's a simpler way to do: self.ident
 
         raise AssertionError("could not determine the thread's id")
 
