@@ -8,7 +8,7 @@ class ThreadManager(object):
     def is_busy(self):
         bool = False
         for id in self.active_threads:
-            bool = bool and self.active_threads[id].is_alive()
+            bool = bool or self.active_threads[id].is_alive()
         return bool
 
     def execute_as_new_process(self, id=None, target=None, args=None, join=True):
